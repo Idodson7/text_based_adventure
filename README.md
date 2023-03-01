@@ -1,3 +1,3 @@
 # Text Based Adventure
 
-![Screenshot]("Screenshot.PNG")
+![Screenshot](http://url/to/Screenshot.PNG)
