@@ -1,7 +1,7 @@
 <body><script language="decker">
 {deck}
 version:1
-card:0
+card:6
 size:[512,342]
 name:"test.html"
 
@@ -76,12 +76,18 @@ image:"%%IMG2AgABVgL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8
 start field:{"type":"field","size":[350,173],"pos":[77,37],"value":"you are right 1 from start"}
 up:{"type":"button","size":[60,20],"pos":[233,232],"text":"Up"}
 right:{"type":"button","size":[60,20],"pos":[268,260],"script":"right 1.0","text":"Right"}
-left:{"type":"button","size":[60,20],"pos":[196,260],"text":"Left"}
+left:{"type":"button","size":[60,20],"pos":[196,260],"script":"right 1.1","text":"Left"}
 down:{"type":"button","size":[60,20],"pos":[233,288],"text":"Down"}
 
 {script:right 1.0}
 on click do
-  go["end" "SlideLeft"]
+  go["end1" "SlideLeft"]
+end
+{end}
+
+{script:right 1.1}
+on click do
+  go["start" "SlideRight"]
 end
 {end}
 
@@ -90,11 +96,23 @@ image:"%%IMG2AgABVgL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8
 {widgets}
 start field:{"type":"field","size":[350,173],"pos":[77,37],"value":"you are up 2 from start"}
 up:{"type":"button","size":[60,20],"pos":[233,232],"text":"Up"}
-right:{"type":"button","size":[60,20],"pos":[268,260],"text":"Right"}
-left:{"type":"button","size":[60,20],"pos":[196,260],"text":"Left"}
-down:{"type":"button","size":[60,20],"pos":[233,288],"script":"up2.0","text":"Down"}
+right:{"type":"button","size":[60,20],"pos":[268,260],"script":"up2.0","text":"Right"}
+left:{"type":"button","size":[60,20],"pos":[196,260],"script":"up2.1","text":"Left"}
+down:{"type":"button","size":[60,20],"pos":[233,288],"script":"up2.2","text":"Down"}
 
 {script:up2.0}
+on click do
+  go["end5" "SlideLeft"]
+end
+{end}
+
+{script:up2.1}
+on click do
+  go["end4" "SlideRight"]
+end
+{end}
+
+{script:up2.2}
 on click do
   go["up1" "SlideUp"]
 end
@@ -107,7 +125,7 @@ start field:{"type":"field","size":[350,173],"pos":[77,37],"value":"you are left
 up:{"type":"button","size":[60,20],"pos":[233,232],"script":"left1.0","text":"Up"}
 right:{"type":"button","size":[60,20],"pos":[268,260],"script":"left1.1","text":"Right"}
 left:{"type":"button","size":[60,20],"pos":[196,260],"text":"Left"}
-down:{"type":"button","size":[60,20],"pos":[233,288],"text":"Down"}
+down:{"type":"button","size":[60,20],"pos":[233,288],"script":"left1.2","text":"Down"}
 
 {script:left1.0}
 on click do
@@ -121,16 +139,34 @@ on click do
 end
 {end}
 
+{script:left1.2}
+on click do
+  go["down2,left1,up1" "SlideUp"]
+end
+{end}
+
 {card:left1,up1}
 image:"%%IMG2AgABVgL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8Crg=="
 {widgets}
 start field:{"type":"field","size":[350,173],"pos":[77,37],"value":"you are left 1and up 1 from start"}
 up:{"type":"button","size":[60,20],"pos":[233,232],"text":"Up"}
-right:{"type":"button","size":[60,20],"pos":[268,260],"text":"Right"}
-left:{"type":"button","size":[60,20],"pos":[196,260],"text":"Left"}
-down:{"type":"button","size":[60,20],"pos":[233,288],"script":"left1,up1.0","text":"Down"}
+right:{"type":"button","size":[60,20],"pos":[268,260],"script":"left1,up1.0","text":"Right"}
+left:{"type":"button","size":[60,20],"pos":[196,260],"script":"left1,up1.1","text":"Left"}
+down:{"type":"button","size":[60,20],"pos":[233,288],"script":"left1,up1.2","text":"Down"}
 
 {script:left1,up1.0}
+on click do
+  go["up1" "SlideLeft"]
+end
+{end}
+
+{script:left1,up1.1}
+on click do
+  go["end2" "SlideRight"]
+end
+{end}
+
+{script:left1,up1.2}
 on click do
   go["left1" "SlideUp"]
 end
@@ -236,12 +272,18 @@ end
 image:"%%IMG2AgABVgL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8Crg=="
 {widgets}
 start field:{"type":"field","size":[350,173],"pos":[77,37],"value":"you are down 2 and left 2 from start"}
-up:{"type":"button","size":[60,20],"pos":[233,232],"text":"Up"}
-right:{"type":"button","size":[60,20],"pos":[268,260],"script":"down2,left2.0","text":"Right"}
+up:{"type":"button","size":[60,20],"pos":[233,232],"script":"down2,left2.0","text":"Up"}
+right:{"type":"button","size":[60,20],"pos":[268,260],"script":"down2,left2.1","text":"Right"}
 left:{"type":"button","size":[60,20],"pos":[196,260],"text":"Left"}
 down:{"type":"button","size":[60,20],"pos":[233,288],"text":"Down"}
 
 {script:down2,left2.0}
+on click do
+  go["end3" "SlideDown"]
+end
+{end}
+
+{script:down2,left2.1}
 on click do
   go["down2,left1" "SlideLeft"]
 end
@@ -266,18 +308,30 @@ end
 image:"%%IMG2AgABVgL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8Crg=="
 {widgets}
 start field:{"type":"field","size":[350,173],"pos":[77,37],"value":"you are down 2, left 1, and up 1 from start"}
-up:{"type":"button","size":[60,20],"pos":[233,232],"text":"Up"}
-right:{"type":"button","size":[60,20],"pos":[268,260],"script":"down2,left1,up1.0","text":"Right"}
-left:{"type":"button","size":[60,20],"pos":[196,260],"text":"Left"}
-down:{"type":"button","size":[60,20],"pos":[233,288],"script":"down2,left1,up1.1","text":"Down"}
+up:{"type":"button","size":[60,20],"pos":[233,232],"script":"down2,left1,up1.0","text":"Up"}
+right:{"type":"button","size":[60,20],"pos":[268,260],"script":"down2,left1,up1.1","text":"Right"}
+left:{"type":"button","size":[60,20],"pos":[196,260],"script":"down2,left1,up1.2","text":"Left"}
+down:{"type":"button","size":[60,20],"pos":[233,288],"script":"down2,left1,up1.3","text":"Down"}
 
 {script:down2,left1,up1.0}
+on click do
+  go["left1" "SlideDown"]
+end
+{end}
+
+{script:down2,left1,up1.1}
 on click do
  
 end
 {end}
 
-{script:down2,left1,up1.1}
+{script:down2,left1,up1.2}
+on click do
+  go["end3" "SlideRight"]
+end
+{end}
+
+{script:down2,left1,up1.3}
 on click do
   go["down2,left1" "SlideUp"]
 end
@@ -299,6 +353,24 @@ end
 image:"%%IMG2AgABVgL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8Crg=="
 {widgets}
 start field:{"type":"field","size":[350,173],"pos":[77,37],"value":"The smell in this room is absolutely dreadful. So much so that you cant seem to catch your breath, like at all. With your consciousness fading you can hear a bellowing voice from the other end of the room.\n\n\"Oh sorry about that mate, I had dwarves for lunch.\"\n\nYour last thoughts are filled with sadness. You are dead."}
+button1:{"type":"button","size":[81,20],"pos":[213,258],"script":"end1.0","text":"Play Again?"}
+
+{card:end3}
+image:"%%IMG2AgABVgL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8Crg=="
+{widgets}
+start field:{"type":"field","size":[350,173],"pos":[77,37],"value":"There's nothing much to this room. Like at all. you cant feel the ground beneath your feet or any walls you try to reach out for. The silence on top of it all is maddening almost like a hellish sensory deprivation chamber. You know escape is statistically impossible, starvation or dehydration are your only solace now.\n\nHave fun drowning in the expanse of your own mind I guess."}
+button1:{"type":"button","size":[81,20],"pos":[213,258],"script":"end1.0","text":"Play Again?"}
+
+{card:end4}
+image:"%%IMG2AgABVgL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8Crg=="
+{widgets}
+start field:{"type":"field","size":[350,173],"pos":[77,37],"value":"From the commotion you hear in this room you think you've stumbled across a group of adventurers chatting about their day. Delighted that you've actually found someone else in this god-forsaken dungeon you approach.\n\nMuch to your surprise however you are met with the tip of a blade now embedded into your chest. Apparently stumbling forward with your arms outstretched can send the wrong idea of who you are. Though if you were actually a zombie, a blade to the chest would just make you angrier.\n\nAh well, lessons to learn on both sides. "}
+button1:{"type":"button","size":[81,20],"pos":[213,258],"script":"end1.0","text":"Play Again?"}
+
+{card:end5}
+image:"%%IMG2AgABVgL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8C/wL/Av8Crg=="
+{widgets}
+start field:{"type":"field","size":[350,173],"pos":[77,37],"value":"After a few steps into this room you feel the sensation of falling.\n\nI think you know where this goes.\n\nIf you don't, it's about 200ft down give or take. "}
 button1:{"type":"button","size":[81,20],"pos":[213,258],"script":"end1.0","text":"Play Again?"}
 
 </script>
